@@ -1,0 +1,15 @@
+{
+  "name": "npmjs",
+  "version": "0.1.0",
+  "description": "NPMJS API",
+  "main": "app.js",
+  "private": true,
+  "author": "Dim",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "*",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "snekfetch": "*"
+  }
+}
