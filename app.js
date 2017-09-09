@@ -11,8 +11,7 @@ const info = [
   '/api/npm/partners',
   '/api/npm/partners/random',
   '/api/user/:user/profile',
-  '/api/user/:user/packages',
-  '/api/package/:package'
+  '/api/user/:user/packages'
 ];
 
 // Routes
@@ -25,11 +24,6 @@ app.get('/api/npm/partners/random', require('./src/npm/partners'));
 app.get('/api/user/:user/profile', require('./src/user/profile'));
 app.get('/api/user/:user/packages', require('./src/user/packages'));
 
-app.get('/api/package/:package', require('./src/package'));
-
-app.get('/', (req, res) => res.send(`<pre style="text-align:center">${info.join('<br>')}</pre>`));
-
-// Redirect errors to root
-app.use((req, res) => res.redirect('/'));
+app.use((req, res) => res.send(`<pre style="text-align:center">${info.join('<br>')}</pre>`));
 
 app.listen(3333);
